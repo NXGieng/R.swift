@@ -18,7 +18,7 @@ extension Struct {
         isStatic: true,
         name: "hostingBundle",
         typeDefinition: .inferred(Type._Bundle),
-        value: "Bundle(for: R.Class.self)"),
+        value: "Bundle.createBundle(name: \"\(bundleIdentifier).bundle\")"),
       Let(
         comments: [],
         accessModifier: .filePrivate,
