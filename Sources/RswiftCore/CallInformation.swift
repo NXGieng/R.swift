@@ -72,6 +72,8 @@ public struct CallInformation {
       return sdkRootURL
     case .sourceRoot:
       return sourceRootURL
+    case .platformDir:
+      return sdkRootURL
     }
   }
 }
