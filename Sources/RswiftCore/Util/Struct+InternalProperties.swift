@@ -11,6 +11,10 @@ import Foundation
 extension Struct {
   func addingInternalProperties(forBundleIdentifier bundleIdentifier: String) -> Struct {
 
+    let bundleValue = bundleIdentifier.isEmpty
+      ? "Bundle(for: R.Class.self)"
+      : "Bundle.createBundle(name: \"\(bundleIdentifier).bundle\")"
+    
     let internalProperties = [
       Let(
         comments: [],
@@ -18,7 +22,7 @@ extension Struct {
         isStatic: true,
         name: "hostingBundle",
         typeDefinition: .inferred(Type._Bundle),
-        value: "Bundle.createBundle(name: \"\(bundleIdentifier).bundle\")"),
+        value: bundleValue),
       Let(
         comments: [],
         accessModifier: .filePrivate,

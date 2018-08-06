@@ -63,7 +63,7 @@ struct CommanderOptions {
   static let xcodeproj = Option("xcodeproj", EnvironmentKeys.xcodeproj, flag: "p", description: "Path to the xcodeproj file.")
   static let target = Option("target", EnvironmentKeys.target, flag: "t", description: "Target the R-file should be generated for.")
 
-  static let bundleIdentifier = Option("bundleIdentifier", EnvironmentKeys.bundleIdentifier, description: "Bundle identifier the R-file is be generated for.")
+  static let bundleIdentifier = Option("bundleIdentifier", "", description: "Bundle identifier the R-file is be generated for.")
   static let productModuleName = Option("productModuleName", EnvironmentKeys.productModuleName, description: "Product module name the R-file is generated for.")
   static let buildProductsDir = Option("buildProductsDir", EnvironmentKeys.buildProductsDir, description: "Build products folder that Xcode uses during build.")
   static let developerDir = Option("developerDir", EnvironmentKeys.developerDir, description: "Developer folder that Xcode uses during build.")
